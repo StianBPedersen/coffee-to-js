@@ -1,4 +1,4 @@
 coffee-to-js
 ============
 
-run task grunt watcher
+run grunt coffee-to-js
