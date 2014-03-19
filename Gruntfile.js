@@ -38,13 +38,25 @@ module.exports = function(grunt) {
 					livereload: true
 				},
 			}
+		},
+		connect: {
+			server: {
+				options: {
+					port: 8000,
+					base: 'app/',
+					hostname: '127.0.0.1',
+					keepalive: true
+				}
+			}
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
+	grunt.registerTask('s', ['connect']);
 	grunt.registerTask('coffee-to-js', ['watch']);
 };

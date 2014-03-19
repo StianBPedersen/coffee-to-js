@@ -1,7 +1,7 @@
 var cubes, list, math, num, number, opposite, race, square,
   __slice = [].slice;
 
-console.log("pikk er digg! yesssster");
+console.log("pjavel jaha");
 
 number = 42;
 

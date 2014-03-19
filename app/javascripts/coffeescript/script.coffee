@@ -1,5 +1,5 @@
 #console
-console.log "pikk er digg! yesssster"
+console.log "pjavel jaha"
 
 # Assignment:
 number   = 42
