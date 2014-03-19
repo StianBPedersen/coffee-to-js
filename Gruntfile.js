@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 		watch: {
 			scripts: {
 				files: ['**/*.coffee'],
-				tasks: ['clean', 'coffee', 'uglify'],
+				tasks: ['coffeelint', 'clean', 'coffee', 'uglify'],
 				options: {
 					livereload: true
 				},
@@ -48,6 +48,9 @@ module.exports = function(grunt) {
 					keepalive: true
 				}
 			}
+		},
+		coffeelint: {
+			app: ['app/javascripts/coffeescript/*.coffee']
 		}
 	});
 
@@ -56,6 +59,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-coffeelint');
 
 	grunt.registerTask('s', ['connect']);
 	grunt.registerTask('coffee-to-js', ['watch']);
